@@ -1,0 +1,48 @@
+# Get some basic MTG card information using the
+# scrython and fetcher APIs
+
+# search and card information
+import scrython
+
+# price
+from sf_price_fetcher import fetcher
+
+# convert to local currency
+from currency_converter import CurrencyConverter
+
+# input a card name to search for
+p = input("Enter card name:")
+
+# convert the text to uppercase
+u = p.upper()
+
+try:
+	# get a random card name if you input the word random
+	if u == "RANDOM":
+		card = scrython.cards.Random()
+	else:
+		# if it's not random then search for the card
+		card = scrython.cards.Named(fuzzy=u)
+except:
+	# card was not found in the search for display a message
+	print ("Name: Card not found on Scryfall.")
+else:
+	# no errors so print the cards information
+	print ("Name: "+card.name())
+	print ("Type: "+card.type_line())
+	print ("Rarity: "+card.rarity())
+
+	try:
+		# get the price of the card (if available)
+		a = fetcher.get(card.name())	
+	except:	
+		# price is not available
+		print("Price: Price not found on Scryfall.")
+	else:
+		# display the current USD price
+		print("Price USD: $"+str(a))
+
+		# convert from USD to AUD currency
+		b = CurrencyConverter().convert(a,'USD','AUD')
+		print(f"Price AUD: ${b:.2f}")
+# end of code
