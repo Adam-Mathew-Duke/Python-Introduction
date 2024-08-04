@@ -11,7 +11,9 @@ from sf_price_fetcher import fetcher
 from currency_converter import CurrencyConverter
 
 # input a card name to search for
-p = input("Enter card name:")
+print ("\n")
+p = input("Enter card name: ")
+print ("\n")
 
 # convert the text to uppercase
 u = p.upper()
@@ -25,14 +27,14 @@ try:
 		card = scrython.cards.Named(fuzzy=u)
 except:
 	# card was not found in the search for display a message
-	print ("Name: Card not found on Scryfall.")
+	print ("NAME: Card not found on Scryfall.")
 else:
 	# no errors so print the cards information
 	print ("Name: "+card.name())
+	print ("Set: "+card.set_name())
 	print ("Type: "+card.type_line())
 	print ("Rarity: "+card.rarity())
-	print ("Collector Number: "+ card.collector_number())
-	print ("Set: "+card.set_name())
+	print ("Number: "+ card.collector_number())
 
 	try:
 		# get the price of the card (if available)
@@ -49,9 +51,11 @@ else:
 		print(f"Price AUD: ${b:.2f}")
 		
 		# URLs for more information
+		print ("\n")
 		print ("Card Link: "+card.scryfall_uri())
 		print ("Set Link: "+card.scryfall_set_uri())
 	finally:
+		print ("\n")
 		input("Press Enter to continue...")
 
 # end of code
