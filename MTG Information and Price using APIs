@@ -31,6 +31,8 @@ else:
 	print ("Name: "+card.name())
 	print ("Type: "+card.type_line())
 	print ("Rarity: "+card.rarity())
+	print ("Collector Number: "+ card.collector_number())
+	print ("Set: "+card.set_name())
 
 	try:
 		# get the price of the card (if available)
@@ -45,4 +47,11 @@ else:
 		# convert from USD to AUD currency
 		b = CurrencyConverter().convert(a,'USD','AUD')
 		print(f"Price AUD: ${b:.2f}")
+		
+		# URLs for more information
+		print ("Card Link: "+card.scryfall_uri())
+		print ("Set Link: "+card.scryfall_set_uri())
+	finally:
+		input("Press Enter to continue...")
+
 # end of code
