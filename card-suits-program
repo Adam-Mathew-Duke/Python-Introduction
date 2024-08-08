@@ -1,0 +1,27 @@
+# a aphasia exercise based off the 4 card suits
+# show a suit then press anykey to view the answer
+
+import os
+import random
+from termcolor import colored # pip install termcolor
+
+card_suits = ['♥','♦','♣','♠']
+a = 0
+os.system('cls')
+while (a <= 5 ):
+	print ("\n")
+	b = random.randrange(4)
+	print (card_suits[b])
+	input ("")
+	if b == 0:
+		print ("Hearts")
+	if b == 1:
+		print ("Diamonds")
+	if b == 2:
+		print ("Clubs")
+	if b == 3:
+		print ("Spades")
+	input ("")
+	a = a + 1
+	os.system('cls')
+# end of program
