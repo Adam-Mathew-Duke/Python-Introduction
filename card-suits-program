@@ -1,27 +1,37 @@
-# a aphasia exercise based off the 4 card suits
-# show a suit then press anykey to view the answer
+# Aphasia extercise using playing card suits
+# Version 1
 
-import os
+import os # clear terminal
 import random
-from termcolor import colored # pip install termcolor
+from colorama import Fore, Back, Style # Python package
 
 card_suits = ['♥','♦','♣','♠']
-a = 0
-os.system('cls')
-while (a <= 5 ):
+card_color = Fore.RED
+card_name = "Hearts"
+os.system('cls') # clear terminal on Windows
+
+while True:
 	print ("\n")
-	b = random.randrange(4)
-	print (card_suits[b])
+	random_card_suit = random.randrange(4)
+	if random_card_suit == 0:
+		card_color = Fore.RED
+		card_text = "Hearts"
+	if random_card_suit == 1:
+		card_color = Fore.RED
+		card_text = "Diamonds"
+	if random_card_suit == 2:
+		card_color = Fore.BLACK
+		card_text = "Clubs"
+	if random_card_suit == 3:
+		card_color = Fore.BLACK
+		card_text = "Spades"
+	print ( card_color + Back.WHITE + card_suits[random_card_suit] )
+	print(Style.RESET_ALL)
 	input ("")
-	if b == 0:
-		print ("Hearts")
-	if b == 1:
-		print ("Diamonds")
-	if b == 2:
-		print ("Clubs")
-	if b == 3:
-		print ("Spades")
-	input ("")
-	a = a + 1
+	print (card_text)
+	c = input ("\nAny key to continue or type exit\n")
+	if c == "exit":
+		os.system('cls')
+		exit(0)
 	os.system('cls')
 # end of program
