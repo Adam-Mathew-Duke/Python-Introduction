@@ -1,26 +1,28 @@
-# Making a little program to learn more about dictionaries
+# MTG Card List - Version 1
 
 import os
 import time
 import scrython
 
+totalCards=5
+cardIndex=[]
+cards={}
+
+prompt = input('How many MTG cards?: ')
+
+try:
+	totalCards = int(prompt)
+except ValueError:
+	print('Value is not an integer - using default value.')
+	time.sleep(2)
+
 os.system('cls')
-print ('Please wait - getting card list')
+print('Please wait - Loading ' + str(totalCards) + ' cards...\n')
 
-cardIndex = ['card1','card2','card3','card4','card5']
-
-for index, item in enumerate(cardIndex):
-	cardIndex[index] = scrython.cards.Random()
-	print ('Loading card ' + str(index+1) + ' of '+ str(len(cardIndex)))
-
-print ('Card list is ready')
-
-cards={cardIndex[0].name():cardIndex[0].rarity(),cardIndex[1].name():cardIndex[1].rarity(),cardIndex[2].name():cardIndex[2].rarity(),cardIndex[3].name():cardIndex[3].rarity(),cardIndex[4].name():cardIndex[4].rarity()}
-
-input('Press any key...')
-os.system('cls')
-
-for index, item in enumerate(cards):
+for index in range(totalCards):
+	cardIndex.append(scrython.cards.Random())
+	cards.update({cardIndex[index].name():cardIndex[index].rarity()})
 	print(index+1,''+list(cards.keys())[index]+' - '+list(cards.values())[index])
 
+print ('\nList is complete!')
 # end of program
