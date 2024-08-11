@@ -4,16 +4,22 @@ import os
 import time
 import scrython
 
-totalCards=5
+totalCards=0
 cardIndex=[]
 cards={}
 
 prompt = input('How many MTG cards?: ')
 
 try:
-	totalCards = int(prompt)
+	totalCards=int(prompt)
 except ValueError:
 	print('Value is not an integer - using default value.')
+	totalCards=5
+	time.sleep(2)
+
+if (totalCards<1 or totalCards>20):
+	print('Value is out of range - using default value.')
+	totalCards=5
 	time.sleep(2)
 
 os.system('cls')
