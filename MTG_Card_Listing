@@ -8,6 +8,7 @@ totalCards=0
 cardIndex=[]
 cards={}
 
+os.system('cls')
 prompt = input('How many MTG cards?: ')
 
 try:
@@ -30,5 +31,5 @@ for index in range(totalCards):
 	cards.update({cardIndex[index].name():cardIndex[index].rarity()})
 	print(index+1,''+list(cards.keys())[index]+' - '+list(cards.values())[index])
 
-print ('\nList is complete!')
+print ('\nList is complete!\n')
 # end of program
