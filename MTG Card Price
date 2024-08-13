@@ -1,0 +1,65 @@
+# MTG Card Price
+# Version 2.0
+
+import scrython
+from sf_price_fetcher import fetcher
+import os
+
+save = 0
+exit = 0
+a = 0
+card = 0
+
+while True:
+
+	os.system('cls')
+	p = input("\nEnter card name or type random: ")
+	u = p.upper()
+	print ("\n")
+
+	try:
+		if u == "RANDOM":
+			card = scrython.cards.Random()
+		else:
+			card = scrython.cards.Named(fuzzy=u)
+	except:
+		print ("Card not found on Scryfall.\n")
+		break
+	else:
+		print ("Name:\t"+card.name())
+		print ("Set:\t"+card.set_name())
+		print ("Type:\t"+card.type_line())
+		print ("Rarity:\t"+card.rarity())
+		print ("Number:\t"+ card.collector_number())
+
+		try:
+			a = fetcher.get(card.name())	
+		except:	
+			print("Price: Not found on Scryfall.\n")
+			break
+		else:
+			# display the current USD price
+			print("USD:\t$"+str(a))
+			print ("\n")
+		finally:
+			save_prompt = input("Press any key to continue, type save or type exit: ")
+			save_prompt = save_prompt.upper()
+			if save_prompt == "SAVE":
+				save = 1
+			if save_prompt == "EXIT":
+				exit = 1
+			if exit == 1:
+				print ('\n')
+				break
+			if save == 1:
+				try:
+					with open("Card_Price_Data.txt", "a") as myfile:
+						myfile.write(card.name())
+						myfile.write(',')
+						myfile.write(str(a))
+						myfile.write('\n')
+				except:
+					print ('There was an error saving to the file.\n')
+					break
+os.system('cls')
+# end of code
