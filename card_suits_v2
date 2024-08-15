@@ -1,0 +1,83 @@
+'''
+Card Suits
+Aphasia exercise using the four playing card suits
+Version 2: adds a GUI
+'''
+
+'''
+To do list:
+code is working! :)
+tidy up the code including comments
+post on github
+export as an exe
+upload to itch.io
+'''
+
+import os
+import random
+import tkinter
+import tkinter as tk
+from tkinter import *
+
+card_suit = ['♥','♦','♣','♠']
+card_name = ['Hearts','Diamonds','Clubs','Spades']
+card_color = ['red','red','black','black']
+change_text = 0
+current_suit = 0
+
+def change():
+
+	if button_text.get() == 'Check':
+		if text_var.get() == card_suit[0]:
+			text_var2.set(card_name[0])
+		elif text_var.get() == card_suit[1]:
+			text_var2.set(card_name[1])
+		elif text_var.get() == card_suit[2]:
+			text_var2.set(card_name[2])
+		elif text_var.get() == card_suit[3]:
+			text_var2.set(card_name[3])
+		button_text.set('Next')
+	elif button_text.get() == 'Next':
+		text_var2.set('')
+		text_var.set(card_suit[random.randint(0, 3)])
+		if text_var.get() == card_suit[0]:
+			w.config(fg=card_color[0])
+		elif text_var.get() == card_suit[1]:
+			w.config(fg=card_color[1])
+		elif text_var.get() == card_suit[2]:
+			w.config(fg=card_color[2])
+		elif text_var.get() == card_suit[3]:
+			w.config(fg=card_color[3])
+		button_text.set('Check')
+
+m = tkinter.Tk()
+button_text = tk.StringVar()
+button_text.set('Check')
+text_var2 = tk.StringVar()
+text_var2.set('')
+text_var = tk.StringVar()
+col = 0
+text_var.set(card_suit[random.randint(0, 3)])
+
+if text_var.get() == card_suit[0]:
+	col=card_color[0]
+elif text_var.get() == card_suit[1]:
+	col=card_color[1]
+elif text_var.get() == card_suit[2]:
+	col=card_color[2]
+elif text_var.get() == card_suit[3]:
+	col=card_color[3]
+
+a = Label(m,textvariable=text_var2)
+a.config(font=("Arial", 25))
+a.pack(pady = (50, 0))
+w = Label(m,textvariable=text_var)
+w.config(font=("Arial", 150),fg=col)
+w.pack()
+m.title('Card Suits')
+button = tk.Button(m, textvariable=button_text, width=25, command = change)
+button.config(font=("Arial", 20))
+button.pack()
+m.geometry("600x500")
+m.mainloop()
+# end of program
