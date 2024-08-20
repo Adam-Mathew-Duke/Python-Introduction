@@ -1,5 +1,5 @@
 A Quick and Easy Intro to Python Programming
 URL: https://www.udemy.com/course/pythonforbeginnersintro/
 
-A collection of my code both from the course exercises and also my programs I made on my
-own to further explore different ideas and concepts that are taught in the cousre.
+1. My code from working through the course exercises and concepts.
+2. My own programs to further explore ideas from the course and solidify concepts.
