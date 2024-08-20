@@ -1,1 +1,5 @@
-I am learning and exploring the Python programming language. This is a place to store my code, little programs and ideas. I'm a bit obsessed with Magic The Gathering (MTG) at the moment so much of my code is focused on cards and their monetary values.
+A Quick and Easy Intro to Python Programming
+URL: https://www.udemy.com/course/pythonforbeginnersintro/
+
+A collection of my code both from the course exercises and also my programs I made on my
+own to further explore different ideas and concepts that are taught in the cousre.
