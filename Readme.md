@@ -20,6 +20,13 @@ Each exercise is aimed at reinforcing foundational skills and understanding core
 ### Programs Folder
 The Programs Folder contains my own Python programs, created to apply the concepts learned in the course. These projects go beyond the exercises and demonstrate how I’ve integrated Python into small, functional programs. Examples include:
 
-*
+* Card suits and Card suits - V1
+* MTG arithmetic
+* MTG concatenation
+* MTG for loops
+* MTG listing
+* MTG price
+* MTG strings
+* MTG variables
 
 Each program reflects my growing confidence in writing clean, functional Python code.
