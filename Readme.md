@@ -1,7 +1,7 @@
-# Python Introduction
+## Python Introduction
 
-## Course items
+### Course items
 Coding exercises from the Python course.
 
-## App items
-My own Python programs using tings I have learn in the Python course.
+### App items
+My own Python programs using concepts learnt in the Python course.
