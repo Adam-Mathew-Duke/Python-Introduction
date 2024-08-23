@@ -20,8 +20,8 @@ Each exercise is aimed at reinforcing foundational skills and understanding core
 ### Programs Folder ([Link](https://github.com/soyfish/Python-introduction/tree/main/Programs))
 The Programs Folder contains my own Python programs, created to apply the concepts learned in the course. These projects go beyond the exercises and demonstrate how I’ve integrated Python into small, functional programs. Examples include:
 
-* Card suits - V1
-* Card suits - V2
+* Card suits - V1 (Terminal)
+* Card suits - V2 (Tkinter)
 * MTG arithmetic
 * MTG concatenation
 * MTG for loops
