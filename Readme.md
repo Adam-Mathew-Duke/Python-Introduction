@@ -1,9 +1,9 @@
 ## Python Introduction
 
-# Overview
+### Overview
 This repository contains the projects and exercises from my journey through an introduction to Python programming. It serves as a record of my learning process, focusing on fundamental programming concepts and practical applications.
 
-# Course Folder
+### Course Folder
 The Course folder includes coding exercises from the Introduction to Python course. These exercises cover key topics such as:
 
 * Variables, operators and strings
@@ -17,7 +17,7 @@ The Course folder includes coding exercises from the Introduction to Python cour
 
 Each exercise is aimed at reinforcing foundational skills and understanding core concepts in Python.
 
-App Folder
+### App Folder
 The App folder contains my own Python programs, created to apply the concepts learned in the course. These projects go beyond the exercises and demonstrate how I’ve integrated Python into small, functional programs. Examples include:
 
 *
