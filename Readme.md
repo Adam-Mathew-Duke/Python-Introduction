@@ -9,7 +9,7 @@ The Course Folder includes coding exercises from the Introduction to Python cour
 * Variables, operators and strings
 * Arthimitic operations
 * Lists, dictionaries and tuples
-* If, For and While loops
+* Conditional statements. If, For and While loops
 * Try and except (error handling)
 * User and built in Python functions
 * Object Orientated Programming (OOP)
