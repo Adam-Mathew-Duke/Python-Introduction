@@ -29,5 +29,6 @@ The Programs Folder contains my own Python programs, created to apply the concep
 * MTG price
 * MTG strings
 * MTG variables
+* Binural Beats V1 (Terminal)
 
 Each program reflects my growing confidence in writing clean, functional Python code.
