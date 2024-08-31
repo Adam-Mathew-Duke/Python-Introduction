@@ -16,19 +16,3 @@ The Course Folder includes coding exercises from the Introduction to Python cour
 * Class and Class Inheritance
 
 Each exercise is aimed at reinforcing foundational skills and understanding core concepts in Python.
-
-### Programs Folder ([Link](https://github.com/soyfish/Python-introduction/tree/main/Programs))
-The Programs Folder contains my own Python programs, created to apply the concepts learned in the course. These projects go beyond the exercises and demonstrate how I’ve integrated Python into small, functional programs. Examples include:
-
-* Card suits - V1 (Terminal)
-* Card suits - V2 (Tkinter)
-* MTG arithmetic
-* MTG concatenation
-* MTG for loops
-* MTG listing
-* MTG price
-* MTG strings
-* MTG variables
-* Binural Beats V1 (Terminal)
-
-Each program reflects my growing confidence in writing clean, functional Python code.
